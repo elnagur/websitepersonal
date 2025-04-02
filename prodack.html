@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Kopi - [nama bisnis]</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigasi */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        ul li {
+            margin-left: 20px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        ul li a:hover {
+            color: #ffd700;
+        }
+
+        .active a {
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        /* Produk Kopi Section */
+        #produk {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .produk-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .produk-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .produk-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .produk-item img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .produk-item h3 {
+            font-size: 1.6em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .produk-item p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .harga {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .btn-beli {
+            background-color: #ffd700;
+            color: #333;
+            padding: 12px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-beli:hover {
+            background-color: #333;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src=["masukin logo yang diinginkan.png"] alt="Logo [nama bisnis]">
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li class="active"><a href="prodack.html">Prodack</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Produk Kopi Section -->
+    <section id="produk">
+        <div class="container">
+            <h2>Produk Kopi Kami</h2>
+            <p>Kami menawarkan berbagai macam kopi pilihan dengan rasa terbaik untuk Anda nikmati. Pilih kopi favorit Anda!</p>
+            
+            <div class="produk-list">
+                <div class="produk-item">
+                    <img src="arabica.jpg" alt="Kopi Arabika">
+                    <h3>Kopi Arabika</h3>
+                    <p>Arabika dari Aceh dengan rasa buah dan aroma floral yang lembut.</p>
+                    <p class="harga">Rp 100.000 / Kg</p>
+                    <a href="#" class="btn-beli">Beli Sekarang</a>
+                </div>
+
+                <div class="produk-item">
+                    <img src="robusta.jpg" alt="Kopi Robusta">
+                    <h3>Kopi Robusta</h3>
+                    <p>Kopi Robusta dari Sumatra dengan rasa yang kuat dan tingkat keasaman rendah.</p>
+                    <p class="harga">Rp 90.000 / Kg</p>
+                    <a href="#" class="btn-beli">Beli Sekarang</a>
+                </div>
+
+                <div class="produk-item">
+                    <img src="luwak.jpg" alt="Kopi Luwak">
+                    <h3>Kopi Luwak</h3>
+                    <p>Kopi Luwak premium dengan cita rasa unik dan aroma yang sangat khas.</p>
+                    <p class="harga">Rp 500.000 / Kg</p>
+                    <a href="#" class="btn-beli">Beli Sekarang</a>
+                </div>
+
+                <div class="produk-item">
+                    <img src="ketapang.jpg" alt="Kopi Ketapang">
+                    <h3>Kopi Ketapang</h3>
+                    <p>Kopi dengan rasa manis dan sedikit keasaman, khas dari Ketapang.</p>
+                    <p class="harga">Rp 120.000 / Kg</p>
+                    <a href="#" class="btn-beli">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Pembelian -->
+    <div id="modalPembelian" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Konfirmasi Pembelian</h3>
+            <p id="modalProdukName"></p>
+            <p id="modalHarga"></p>
+            <button id="btnPilihPembayaran">Pilih Metode Pembayaran</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [nama bisnis]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Ambil modal
+        var modal = document.getElementById("modalPembelian");
+
+        // Ambil tombol "Beli Sekarang"
+        var btnBeliSekarang = document.querySelectorAll(".btn-beli");
+
+        // Ambil elemen <span> untuk menutup modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Ketika tombol "Beli Sekarang" diklik, tampilkan modal
+        btnBeliSekarang.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); // Mencegah reload halaman
+                var produkName = this.parentElement.querySelector("h3").textContent; // Nama produk
+                var harga = this.parentElement.querySelector(".harga").textContent; // Harga produk
+
+                // Set nama produk dan harga di modal
+                document.getElementById("modalProdukName").textContent = produkName;
+                document.getElementById("modalHarga").textContent = harga;
+
+                // Tampilkan modal
+                modal.style.display = "block";
+            });
+        });
+
+        // Ketika tombol <span> (x) diklik, tutup modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Ketika pengguna mengklik di luar modal, tutup modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

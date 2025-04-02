@@ -1,0 +1,287 @@
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem; /* Menggunakan rem untuk konsistensi */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header logo */
+header .logo img {
+    width: 150px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem; /* Menggunakan rem untuk konsistensi */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Menggunakan rem untuk ukuran font */
+    text-transform: uppercase;
+    padding: 0.5rem 1rem; /* Menggunakan rem untuk padding */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #e74c3c;
+    border-radius: 5px;
+    transform: translateY(-2px); /* Animasi hover */
+}
+
+/* Tombol di Header */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn1 {
+    border: 1px solid white;
+    padding: 0.6rem 2rem; /* Menggunakan rem untuk padding */
+    color: white;
+    text-decoration: none;
+    transition: background 0.6s ease, transform 0.3s ease;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.btn1:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Produk Section */
+#produk {
+    background: white;
+    padding: 5rem 0; /* Menggunakan rem untuk padding */
+    text-align: center;
+}
+
+#produk h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#produk p {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+/* List Produk */
+.produk-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; /* Menggunakan rem untuk gap */
+    justify-content: center;
+}
+
+.produk-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 450px;
+    max-width: 300px;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produk-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produk-item h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.produk-item p {
+    font-size: 1rem;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.harga {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.btn-beli {
+    background: #3498db;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-beli:hover {
+    background: #2980b9;
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .produk-item {
+        max-width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .produk-item img {
+        height: 150px;
+    }
+
+    #produk h2 {
+        font-size: 2rem;
+    }
+
+    #produk p {
+        font-size: 1rem;
+    }
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 5rem 0; /* Menggunakan rem untuk padding */
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#reviewForm {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#reviewForm input, #reviewForm textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#reviewForm button {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#reviewForm button:hover {
+    background-color: #ffd700;
+    color: #333;
+}
+
+#reviews p {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+}
+/* Form Styling */
+#testimonials form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#testimonials form div {
+    margin-bottom: 15px;
+}
+
+#testimonials label {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#testimonials input, #testimonials textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+#testimonials button {
+    background-color: #ffd700;
+    color: #333;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#testimonials button:hover {
+    background-color: #333;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Kita Bersama</title>
+    <style>
+        /* CSS Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("cofee.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative; /* Untuk memastikan nav berada di posisi relative */
+        }
+
+        /* Navigasi - Menu di sebelah kanan */
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Mengubah warna saat hover */
+        }
+
+        .header-content h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .header-content p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .btn1 {
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 12px 35px;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: 0.4s ease;
+        }
+
+        .btn1:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section */
+        section {
+            padding: 50px 0;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        /* About */
+        #about img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Products */
+        #products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 45%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background-color: #e9e9e9;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        #testimonials p {
+            font-style: italic;
+            font-size: 1.2em;
+        }
+
+        /* CTA */
+        #cta {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        footer li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.5em;
+            }
+
+            .header-content p {
+                font-size: 1.2em;
+            }
+
+            .product {
+                width: 100%;
+                text-align: center;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .team {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="profil.html">Profil</a>
+            <a href="prodack.html">Prodack</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="header-content">
+            <h1>Selamat Datang</h1>
+            <h1>Kopi Kita Bersama</h1>
+            <p>Solusi Kreatif untuk Bisnis Anda</p>
+            <a href="profil.html" class="btn1">Jelajahi Layanan Kami</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah penyedia kopi terbaik yang menyajikan pengalaman unik untuk setiap pelanggan.</p>
+        <img src="about-image.jpg" alt="About Us">
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Produk Kami</h2>
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Kopi Arabika</h3>
+            <p>Kopi dengan cita rasa yang kuat dan aromatik.</p>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Kopi Robusta</h3>
+            <p>Kopi dengan rasa yang lebih pahit dan intens.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>Testimoni Pelanggan</h2>
+        <p>"Kopi ini sangat nikmat! Layanan cepat dan ramah, sangat merekomendasikan." – Aulia</p>
+        <p>"Rasa kopi yang luar biasa, saya pasti kembali!" – Budi</p>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta">
+        <h2>Yuk, Bergabung dengan Kami!</h2>
+        <p>Jangan lewatkan pengalaman kopi terbaik. Pesan sekarang dan nikmati berbagai promo menarik.</p>
+        <a href="profil.html" class="btn1">Pesan Sekarang</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kopi Kita Bersama. Semua hak cipta dilindungi.</p>
+        <ul>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

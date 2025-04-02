@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - [Nama Bisnis]</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .main ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main ul li {
+            margin-left: 20px;
+        }
+
+        .main ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .main ul li a:hover {
+            color: #ffd700;
+        }
+
+        .active a {
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        /* Section */
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        #about img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #about img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Product Section */
+        .product {
+            display: inline-block;
+            width: 45%;
+            margin-bottom: 40px;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            object-fit: cover;
+            height: 300px;
+        }
+
+        .product h3 {
+            font-size: 1.8em;
+            margin: 20px 0 10px;
+            color: #333;
+        }
+
+        .product p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+        }
+
+        #testimonials p {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #testimonials .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #testimonials .testimonial h3 {
+            margin-top: 15px;
+            color: #333;
+            font-size: 1.4em;
+        }
+
+        /* Form Styling */
+        #testimonials form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        #testimonials form div {
+            margin-bottom: 15px;
+        }
+
+        #testimonials label {
+            display: block;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        #testimonials input, #testimonials textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #f9f9f9;
+        }
+
+        #testimonials button {
+            background-color: #ffd700;
+            color: #333;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        #testimonials button:hover {
+            background-color: #333;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+        }
+
+        /* CTA Section */
+        #cta {
+            background-color: #333;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        #cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #cta p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn1 {
+            background-color: #ffd700;
+            color: #333;
+            padding: 15px 35px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.4s ease;
+        }
+
+        .btn1:hover {
+            background-color: #333;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        footer a:hover {
+            color: #ffd700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            .main ul li {
+                margin: 10px 0;
+            }
+
+            .product {
+                width: 100%;
+            }
+
+            #cta h2 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="logo.png" alt="Logo [Nama Bisnis]">
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="profil.html">Profil</a></li>
+                <li><a href="prodack.html">Produk</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah [Nama Perusahaan Kopi], sebuah perusahaan yang berdedikasi untuk menghadirkan pengalaman kopi terbaik bagi para pecinta kopi. Kami percaya bahwa setiap cangkir kopi harus menjadi momen istimewa, dan itulah mengapa kami hanya menggunakan biji kopi pilihan dari perkebunan terbaik di dunia.</p>
+            <img src="cofee.png" alt="cofee">
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="container">
+            <h2>Produk Kami</h2>
+            <div class="product">
+                <img src="arabica.jpg" alt="Kopi Arabika">
+                <h3>Kopi Arabika [Nama Daerah]</h3>
+                <p>Kopi Arabika pilihan dari [Nama Daerah], dikenal dengan aroma floral dan rasa yang lembut dengan sentuhan citrus. Cocok untuk Anda yang menyukai kopi dengan tingkat keasaman sedang.</p>
+            </div>
+            <div class="product">
+                <img src="robusta.jpg" alt="Kopi Robusta">
+                <h3>Kopi Robusta [Nama Daerah]</h3>
+                <p>Kopi Robusta dari [Nama Daerah] dengan rasa yang kuat dan body yang tebal. Ideal bagi Anda yang mencari kopi dengan kafein tinggi dan rasa yang intens.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>Apa Kata Pecinta Kopi</h2>
+            <div class="testimonial">
+                <p>"Kopi dari [Nama Perusahaan Kopi] benar-benar istimewa. Aroma dan rasanya membuat saya ketagihan. Setiap pagi menjadi lebih menyenangkan dengan secangkir kopi dari mereka!"</p>
+                <h3>- [Nama Pelanggan], Pecinta Kopi Sejati</h3>
+            </div>
+
+            <!-- Form Komentar -->
+            <h3>Berikan Komentar Anda</h3>
+            <form action="submit_comment.php" method="POST" id="commentForm">
+                <div>
+                    <label for="name">Nama Anda:</label>
+                    <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                </div>
+
+                <div>
+                    <label for="comment">Komentar:</label>
+                    <textarea id="comment" name="comment" required placeholder="Tulis komentar Anda di sini" rows="4"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn1">Kirim Komentar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta">
+        <div class="container">
+            <h2>Nikmati Kopi Terbaik Hari Ini</h2>
+            <p>Ingin merasakan kenikmatan kopi pilihan kami? Pesan sekarang dan rasakan sendiri kenikmatannya!</p>
+            <a href="prodack.html" class="btn1">Pesan Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Nama Perusahaan Kopi]. All rights reserved.</p>
+            <ul>
+                <li><a href="https://www.facebook.com/namaperusahaankopi">Facebook</a></li>
+                <li><a href="https://www.instagram.com/namaperusahaankopi">Instagram</a></li>
+                <li><a href="https://twitter.com/namaperusahaankopi">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

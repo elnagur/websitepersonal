@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - [Nama Bisnis]</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header img {
+            height: 40px; /* Ukuran logo lebih kecil */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        .active {
+            background-color: #ffd700;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        /* About Section */
+        #about {
+            text-align: center;
+            padding: 50px 20px;
+            background: white;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+        }
+
+        .about-text h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #444;
+        }
+
+        .about-text p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .about-text ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .about-text li {
+            margin-bottom: 8px;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+            min-width: 300px;
+            padding: 15px;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text, .about-image {
+                text-align: center;
+            }
+
+            .about-text h3 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            footer p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="cofee.png" alt="Logo [Nama Bisnis]">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="prodack.html">Produk</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>[Nama Bisnis] berkomitmen untuk menghadirkan kopi berkualitas dengan cita rasa terbaik. Kami percaya bahwa kopi adalah lebih dari sekadar minuman—ia adalah seni, pengalaman, dan tradisi.</p>
+        
+        <div class="about-content">
+            <!-- Text Content -->
+            <div class="about-text">
+                <h3>Visi Kami</h3>
+                <p>Menjadi pemimpin industri kopi yang menghadirkan pengalaman unik bagi setiap penikmatnya.</p>
+
+                <h3>Misi Kami</h3>
+                <p>Kami berfokus pada keberlanjutan dan kualitas terbaik, serta mendukung petani kopi lokal untuk pertumbuhan bersama.</p>
+
+                <h3>Nilai-Nilai Kami</h3>
+                <ul>
+                    <li><strong>Kualitas:</strong> Kopi pilihan dengan rasa terbaik.</li>
+                    <li><strong>Keberlanjutan:</strong> Ramah lingkungan & mendukung petani.</li>
+                    <li><strong>Komunitas:</strong> Memberdayakan petani kopi lokal.</li>
+                </ul>
+            </div>
+            
+            <!-- Image Content -->
+            <div class="about-image">
+                <img src="[fotobersamakalauada.jpg]" alt="Tim Kami">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 [Nama Bisnis]. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
